@@ -21,7 +21,7 @@
         </div>
     @endif
 
-    <form action="{{ route('cursosmanager.store') }}" method="POST">
+    <form action="{{ route('cursosmanager.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="row">
@@ -40,7 +40,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Imagem:</strong>
-                    <input type="input" name="imagem" class="form-control" placeholder="Imagem">
+                    <input type="file" name="imagem" class="form-control" placeholder="Imagem">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

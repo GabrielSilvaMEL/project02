@@ -49,3 +49,5 @@ Route::post('/contatos', [ContatosController::class, 'index'])->name('site.conta
 
     //Instruções para criação/alteração/exclusão de propriedades de cursos
 Route::resource('cursosmanager', CursoManagerController::class);
+
+Route::resource('contatosmanager', ContatosManagerController::class);
