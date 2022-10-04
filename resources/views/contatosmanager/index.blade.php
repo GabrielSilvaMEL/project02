@@ -34,8 +34,7 @@
 
                     <a class="btn btn-info" href="{{ route('contatosmanager.show', $contato->id) }}">Exibir</a>
 
-                    <a class="btn btn-primary" href="{{ route('contatosmanager.edit', $contato->id) }}">Editar</a>
-
+                
                     @csrf
                     @method('DELETE')
 
