@@ -6,7 +6,6 @@
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-success" href="{{ route('contatosmanager.create') }}">Criar Novo contato</a>
     <p></p>
     @if ($message = Session::get('success'))
         <p></p>
@@ -27,8 +26,8 @@
         <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $contato->nome }}</td>
-            <td>{{ $contato->descricao }}</td>
-            <td>{{ $contato->imagem }}</td>
+            <td>{{ $contato->mensagem }}</td>
+            <td>{{ $contato->status}}</td>
             <td>
                 <form action="{{ route('contatosmanager.destroy', $contato->id) }}" method="POST">
 

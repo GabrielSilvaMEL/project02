@@ -15,7 +15,7 @@
         <p class="msg">{{ session('msg') }}</p>
         <p></p>
     @endif
-    <form method="post">
+    <form method="post" action="">
         @csrf
         <div class="form-group">
             <label for="nomeContato">Nome:</label>
@@ -42,9 +42,4 @@
     </form>
 </div>
 <hr>
-{{-- <div class="container">
-    <p>Email: {{ $email }}</p>
-    <p>Tipo Contato: {{ $tipo }}</p>
-    <p>Mensagem: {{ $mensagem }}</p>
-</div> --}}
 @endsection

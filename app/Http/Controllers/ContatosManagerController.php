@@ -11,8 +11,7 @@ class ContatosManagerController extends Controller
 
     public function index()
     {
-        $contato = contato::latest()->paginate(5);
-
+        $contatos = contato::latest()->paginate(5);
         return view('contatosmanager.index',compact('contatos'))
                     ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -20,11 +19,9 @@ class ContatosManagerController extends Controller
     //SHOW
     public function show($id)
     {
-        contato::findOrFail($id);
-
-        return redirect()->route('contatosmanager.index')->with('success','contato atualizado com sucesso!');
         $contato = contato::findOrFail($id);
-
+        $contato->lida = true;
+        $contato->save();
         return view('contatosmanager.show',compact('contato'));
     }
 
