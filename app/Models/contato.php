@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class contato extends Model
+class Contato extends Model
 {
     use HasFactory;
 
@@ -14,6 +14,6 @@ class contato extends Model
         'email',
         'tipo',
         'mensagem',
-        'status',
+        'status'
     ];
 }

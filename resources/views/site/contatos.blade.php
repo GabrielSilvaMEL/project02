@@ -15,7 +15,7 @@
         <p class="msg">{{ session('msg') }}</p>
         <p></p>
     @endif
-    <form method="post" action="">
+    <form method="post">
         @csrf
         <div class="form-group">
             <label for="nomeContato">Nome:</label>

@@ -11,6 +11,12 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Data:</strong>
+                {{ $contato->created_at }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>Nome:</strong>
                 {{ $contato->nome }}
             </div>
@@ -23,8 +29,21 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Imagem:</strong>
-                {{ $contato->status }}
+                <strong>E-mail:</strong>
+                {{ $contato->email }}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Tipo:</strong>
+                {{ $contato->tipo }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Status:</strong>
+                {{ $contato->status}}
             </div>
         </div>
     </div>

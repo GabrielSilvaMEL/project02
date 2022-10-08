@@ -46,7 +46,7 @@ Route::get('/cursos', [CursosController::class, 'index'])->name('site.cursos');
 
     //Rotas para ambos métodos get/post dos contatos
 Route::get('/contatos', [ContatosController::class, 'index'])->name('site.contatos');
-Route::post('/contatos', [ContatosController::class, 'index'])->name('site.contatos');
+Route::post('/contatos', [ContatosController::class, 'store'])->name('site.contatos');
 
     //Instruções para criação/alteração/exclusão de propriedades de cursos
 Route::resource('cursosmanager', CursoManagerController::class);

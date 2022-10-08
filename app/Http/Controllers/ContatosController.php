@@ -19,9 +19,11 @@ class ContatosController extends Controller
         $contato->email = $request->emailContato;
         $contato->tipo = $request->tipoContato;
         $contato->mensagem = $request->mensagemContato;
+        $contato->status = false;
 
         try {
             $contato->save();
+            
 
             return redirect()->action([ContatosController::class, 'index'])
                                     ->with('msg','Mensagem enviada com sucesso!');
