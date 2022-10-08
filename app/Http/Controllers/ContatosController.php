@@ -24,7 +24,6 @@ class ContatosController extends Controller
         try {
             $contato->save();
             
-
             return redirect()->action([ContatosController::class, 'index'])
                                     ->with('msg','Mensagem enviada com sucesso!');
         } catch (\Exception $e) {
