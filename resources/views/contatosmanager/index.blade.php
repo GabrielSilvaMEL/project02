@@ -2,12 +2,11 @@
 
 @section('content')
 <div class="jumbotron">
-    <h1 class="display-4">Projeto Laravel - Cadastro de contatos</h1>
+    <h1 class="display-4">Projeto Laravel - Mensagens</h1>
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-success" href="{{ route('contatosmanager.create') }}">Criar Novo contato</a>
-    <p></p>
+     <p></p>
     @if ($message = Session::get('success'))
         <p></p>
         <div class="alert alert-success">
@@ -19,16 +18,16 @@
         <tr>
             <th>#</th>
             <th>Nome</th>
-            <th>Descrição</th>
-            <th>Imagem</th>
+            <th>Mensagem</th>
+            <th>Status</th>
             <th width="280px">Ação</th>
         </tr>
         @foreach ($contatos as $contato)
         <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $contato->nome }}</td>
-            <td>{{ $contato->descricao }}</td>
-            <td>{{ $contato->imagem }}</td>
+            <td>{{ $contato->mensagem }}</td>
+            <td>{{ $contato->status }}</td>
             <td>
                 <form action="{{ route('contatosmanager.destroy', $contato->id) }}" method="POST">
 

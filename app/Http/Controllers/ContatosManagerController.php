@@ -13,10 +13,28 @@ class ContatosManagerController extends Controller
     {
         $contato = contato::latest()->paginate(5);
 
-        return view('contatosmanager.index',compact('contatos'))
+        return view('contatosmanager.index',compact('contato'))
                     ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
+    public function store(Request $request)
+    {
+        $request->validate([
+            'nome' => 'required',
+            'descricao' => 'required',
+            'imagem' => 'required'
+        ]);
+
+        // contato::create($request->all());
+        $contato = new contato;
+        $contato->nome = $request->nome;
+        $contato->mensagem = $request->mensagem;
+        $contato->status='';
+        
+        $contato->save();
+
+        return redirect()->route('contatosmanager.index')->with('success','contato criado com sucesso!');
+    }
     //SHOW
     public function show($id)
     {
