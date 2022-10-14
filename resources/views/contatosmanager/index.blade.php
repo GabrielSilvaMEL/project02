@@ -19,7 +19,8 @@
             <th>#</th> 
             <th>Data</th>
             <th>Nome</th>
-
+            <th>E-mail</th>
+            <th>Tipo</th>
             <th>Status</th>
             <th width="280px">Ação</th>
         </tr>
@@ -28,10 +29,9 @@
             <td>{{ ++$i }}</td>
             <td>{{ $contato->created_at }}</td>
             <td>{{ $contato->nome }}</td>
-
-            <td>{{ $contato->mensagem }}</td>
-            <td>{{ $contato->status }}</td>
-
+            <td>{{ $contato->email }}</td>
+            <td>{{ $contato->tipo }}</td>
+            <td>{{( $contato->status ? "Lida": "Não Lida")}}</td>
             <td>
                 <form action="{{ route('contatosmanager.destroy', $contato->id) }}" method="POST">
 
