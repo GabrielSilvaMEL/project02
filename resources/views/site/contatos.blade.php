@@ -42,9 +42,4 @@
     </form>
 </div>
 <hr>
-{{-- <div class="container">
-    <p>Email: {{ $email }}</p>
-    <p>Tipo Contato: {{ $tipo }}</p>
-    <p>Mensagem: {{ $mensagem }}</p>
-</div> --}}
 @endsection
