@@ -36,12 +36,10 @@
                 <form action="{{ route('contatosmanager.destroy', $contato->id) }}" method="POST">
 
                     <a class="btn btn-info" href="{{ route('contatosmanager.show', $contato->id) }}">Exibir</a>
-
-                
                     @csrf
                     @method('DELETE')
-
                     <button type="submit" class="btn btn-danger">Excluir</button>
+                    
                 </form>
             </td>
         </tr>
